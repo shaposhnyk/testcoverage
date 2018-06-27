@@ -3,7 +3,7 @@
 This little project is created after a discussion with a person from SonarSource, who claimed that 100% test coverage is the most important cornerstone of programming.
 
 Here we have two classes with tests:
-- Hundred class has 100%-coverage, while "featuring" at least 3 problems, NPE, AIOOBE
+- Hundred class has 100%-coverage, while "featuring" at least 3 problems like NPEs or IndexOutOfBounds
 - Fifty class has 50%-coverage, with all edge cases addresses
 
 Which is not the case:
