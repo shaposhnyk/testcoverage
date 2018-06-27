@@ -4,7 +4,7 @@ This little project is created after a discussion with a person from SonarSource
 
 Here we have two classes with tests:
 - Hundred class has 100%-coverage, while "featuring" at least 3 problems like NPEs or IndexOutOfBounds
-- Fifty class has 50%-coverage, with all edge cases addresses
+- Fifty class has 50%-coverage, with all edge cases addressed
 
 Which is not the case:
 - Quite often code and tests are created by the same person, so he/she may overlook some problems, this is especially true so concurency issues, and for NPE handling.
