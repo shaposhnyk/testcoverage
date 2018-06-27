@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 /**
  * Here we have a 100%-covered code, because we must do so
@@ -55,6 +57,8 @@ public class HundredTest {
     @Test
     public void compute3() { // and we should use mockito in our tests
         Hundred hundred = new Hundred("xxx");
+        Hundred stock = mock(Hundred.class);
+        when(stock.compute("abcdef/gh")).thenReturn("def");
         assertThat(hundred.compute("abcdef/gh"), equalTo("def"));
     }
 
