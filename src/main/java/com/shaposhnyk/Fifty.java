@@ -3,6 +3,10 @@ package com.shaposhnyk;
 
 import java.util.function.Function;
 
+/**
+ * Here we have 50% class coverage and 43% method coverage.
+ * However it covers all edge cases
+ */
 public class Fifty {
 
     private final String entity;
@@ -12,13 +16,13 @@ public class Fifty {
     }
 
     public String getEntity() {
-        return entity;
-    } // this is not covered
+        return entity; // this is not covered
+    }
 
     public String compute(String source) {
         if (source == null || source.length() <= 3) {
             return "";
-        } else if (source.substring(0,3).contains("/")) {
+        } else if (source.substring(0, 3).contains("/")) {
             return "aaa";
         } else if (!source.substring(3).contains("/")) {
             return "bbb";
@@ -39,7 +43,7 @@ public class Fifty {
      * @return compute as function (or guava function)
      */
     public Function<String, String> asFunction() {
-        return this::compute; // it is usefull to have to function converter // this neither
+        return this::compute; // it is useful to have to function converter // this neither
     }
 
     /**
@@ -48,6 +52,16 @@ public class Fifty {
      * @return new instance of Fifty class. Nulls are propagated
      */
     public static Fifty of(Object someAnotherSource) {
+        if (someAnotherSource == null) {
+            throw new MyException("entity cannot be null");
+        }
         return new Fifty(someAnotherSource == null ? null : someAnotherSource.toString());
+    }
+
+    // quite useless but quite often some wrappers are required, to pass something to another library
+    private static class MyException extends IllegalArgumentException {
+        public MyException(String message) {
+            super(message);
+        }
     }
 }

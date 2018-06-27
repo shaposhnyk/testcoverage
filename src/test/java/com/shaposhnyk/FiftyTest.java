@@ -23,7 +23,7 @@ public class FiftyTest {
     public void allAfterSlashIsRemoved() {
         Fifty fifty = Fifty.of(Integer.valueOf(10));
 
-        assertThat(fifty.compute("ABCD/EFG"), equalTo("ABCD"));
-        assertThat(fifty.compute("ABCD/EF/G"), equalTo("ABCD/EF"));
+        assertThat(fifty.compute("ABCD/EFG"), equalTo("D"));
+        assertThat(fifty.compute("ABCD/EF/G"), equalTo("D/EF"));
     }
 }

@@ -43,30 +43,30 @@ public class HundredTest {
     @Test
     public void compute1() { // do something simple - this will 100% code coverage
         Hundred hundred = new Hundred("xxx");
-        assertThat(hundred.compute("abcdef/gh"), equalTo("ef"));
+        assertThat(hundred.compute("abcdef/gh"), equalTo("def"));
     }
 
     @Test
     public void compute2() { // it is the same as c1, just we like to modify unrelated
         Hundred hundred = new Hundred("abc");
-        assertThat(hundred.compute("abcdef/gh"), equalTo("ef"));
+        assertThat(hundred.compute("abcdef/gh"), equalTo("def"));
     }
 
     @Test
     public void compute3() { // and we should use mockito in our tests
         Hundred hundred = new Hundred("xxx");
-        assertThat(hundred.compute("abcdef/gh"), equalTo("ef"));
+        assertThat(hundred.compute("abcdef/gh"), equalTo("def"));
     }
 
     @Test
     public void compute4() { // it is the same as c1, but corporate policy oblige us to have at least 5 tests per class
         Hundred hundred = new Hundred("xxx");
-        assertThat(hundred.compute("abcdef/gh"), equalTo("ef"));
+        assertThat(hundred.compute("abcdef/gh"), equalTo("def"));
     }
 
     @Test
     public void compute5() { // it is the same as c1, but corporate policy oblige us to have at least 5 tests per class
         Hundred hundred = new Hundred("xxx");
-        assertThat(hundred.compute("abcdef/gh"), equalTo("ef"));
+        assertThat(hundred.compute("abcdef/gh"), equalTo("def"));
     }
 }
